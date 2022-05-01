@@ -1,18 +1,6 @@
 import { makeStyles } from '@mui/styles';
 
-const homePageStyles = makeStyles(() => ({
-    homepage: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        padding: '20px 80px',
-    },
-    directoryMenu: {
-        width: '100%',
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-    },
+const menuItemStyles = makeStyles(() => ({
     menuItem: {
         minWidth: '30%',
         height: '240px',
@@ -22,6 +10,8 @@ const homePageStyles = makeStyles(() => ({
         justifyContent: 'center',
         border: '1px solid black',
         margin: '0 7.5px 15px',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
 
         '&:first-child': {
             marginRight: '7.5px',
@@ -30,14 +20,19 @@ const homePageStyles = makeStyles(() => ({
             marginLeft: '7.5px',
         },
     },
+    size: {
+        height: '400px',
+    },
     content: {
         height: '90px',
         padding: '0 25px',
-        display: 'block',
-        flexDirection: 'column',
+        display: 'flex',
+        flexDirection: 'column !important' as 'column',
         alignItems: 'center',
         justifyContent: 'center',
         border: '1px solid black',
+        backgroundColor: '#fff',
+        opacity: 0.7,
     },
     title: {
         fontWeight: 'bold',
@@ -51,4 +46,4 @@ const homePageStyles = makeStyles(() => ({
     },
 }));
 
-export default homePageStyles;
+export default menuItemStyles;
