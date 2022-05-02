@@ -21,7 +21,11 @@
         "sourceType": "module",
         "project": "./tsconfig.json"
     },
-    "plugins": ["react", "@typescript-eslint", "prettier"],
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
     "rules": {
         "@typescript-eslint/comma-dangle": "off",
         "prettier/prettier": [
@@ -29,6 +33,9 @@
             {
                 "endOfLine": "auto"
             }
+        ],
+        "react/function-component-definition": [
+            "off"
         ]
     }
 }

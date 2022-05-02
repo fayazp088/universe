@@ -4,7 +4,7 @@ import directoryMenuStyles from './directoryStyles';
 import { DirectorySectionTypes } from '../../types/homePageTypes';
 import MenuItems from '../menuItems/MenuItems';
 
-const Directory: React.FunctionComponent<{}> = function () {
+const Directory: React.FunctionComponent<{}> = () => {
     const classes = directoryMenuStyles();
     const sections: DirectorySectionTypes[] = [
         {

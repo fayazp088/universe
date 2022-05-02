@@ -10,14 +10,17 @@ const menuItemStyles = makeStyles(() => ({
         justifyContent: 'center',
         border: '1px solid black',
         margin: '0 7.5px 15px',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
+        overflow: 'hidden',
 
         '&:first-child': {
             marginRight: '7.5px',
         },
         '&:last_child': {
             marginLeft: '7.5px',
+        },
+
+        '&:hover': {
+            cursor: 'pointer',
         },
     },
     size: {
@@ -33,6 +36,11 @@ const menuItemStyles = makeStyles(() => ({
         border: '1px solid black',
         backgroundColor: '#fff',
         opacity: 0.7,
+        position: 'absolute',
+
+        '&:hover': {
+            opacity: 0.9,
+        },
     },
     title: {
         fontWeight: 'bold',
@@ -43,6 +51,16 @@ const menuItemStyles = makeStyles(() => ({
     subtitle: {
         fontWeight: 'lighter',
         fontSize: '16px',
+    },
+    background: {
+        width: '100%',
+        height: '100%',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        '&:hover': {
+            transform: 'scale(1.1)',
+            transition: 'transform 6s cubic-bezier(.17,.67,.83,.67)',
+        },
     },
 }));
 
