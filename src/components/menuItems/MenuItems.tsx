@@ -1,16 +1,19 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+
 import menuItemStyles from './menuItemsStyles';
 import { MenuItemsTypes } from '../../types/homePageTypes';
 
-const MenuItems: React.FunctionComponent<MenuItemsTypes> = ({
-    title,
-    imageUrl,
-    size = '',
-}: MenuItemsTypes) => {
+const MenuItems = ({ title, imageUrl, size = '', linkUrl }: MenuItemsTypes) => {
     const classes = menuItemStyles();
+    const navigate = useNavigate();
+
     return (
-        <Grid className={`${classes.menuItem} ${size && classes.size}`}>
+        <Grid
+            className={`${classes.menuItem} ${size && classes.size}`}
+            onClick={() => navigate(linkUrl, { replace: true })}
+        >
             <Grid
                 style={{ backgroundImage: `url(${imageUrl})` }}
                 className={classes.background}

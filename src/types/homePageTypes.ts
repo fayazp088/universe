@@ -2,6 +2,7 @@ export type MenuItemsTypes = {
     title: string;
     imageUrl: string;
     size: string;
+    linkUrl: string;
 };
 
 export type DirectorySectionTypes = {
@@ -9,4 +10,5 @@ export type DirectorySectionTypes = {
     imageUrl: string;
     id: number;
     size?: string;
+    linkUrl: string;
 };
